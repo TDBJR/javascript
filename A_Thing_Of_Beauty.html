@@ -1,0 +1,53 @@
+<html>
+<script>
+var contacts = [
+// the contents can be accessed with wither the [0].name or [0][0]
+    { //contacts[0]
+        "firstName": "Akira", //contacts[0].firstName
+        "lastName": "Laine",//contacts[0].lastName
+        "number": "0543236543",//contacts[0].number
+        "likes": ["Pizza", "Coding", "Brownie Points"]//contacts[0].likes
+    },
+    {//contacts[1]
+        "firstName": "Harry",//contacts[1][0]
+        "lastName": "Potter",//contacts[1][1]
+        "number": "0994372684",///contacts[1][2]
+        "likes": ["Hogwarts", "Magic", "Hagrid"]//contacts[1][3]
+    },
+    { //contacts[2]
+        "firstName": "Sherlock",//contacts[2].firstName
+        "lastName": "Holmes",//contacts[2].lastName
+        "number": "0487345643",//contacts[2].number
+        "likes": ["Intriguing Cases", "Violin"]//contacts[2].likes
+    },
+    {// contacts[3]
+        "firstName": "Kristian",//contacts[3][0]
+        "lastName": "Vos", //contacts[3][1]
+        "number": "unknown",//contacts[3][2]
+        "likes": ["Javascript", "Gaming", "Foxes"]//contacts[3][3]
+    }
+];
+
+function lookUpProfile( firstName, prop ){
+	// Only change code below this line
+var result = undefined;
+	for (x=0; x<contacts.length; x++){
+	if (contacts[x].firstName == firstName){
+		
+		if (contacts[x].hasOwnProperty(prop)){
+			
+			result = contacts[x][prop];
+			break;// instead of useing a bunch of returns
+		}result = "No such property";
+		break;  // you can use breaks in order to jump to the return statment
+	}
+}if (result === undefined){
+	result = "No such contact";
+	
+}return result;
+
+
+
+
+</script>
+</html>

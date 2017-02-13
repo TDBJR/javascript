@@ -1,0 +1,38 @@
+<script>
+
+function lookUpProfile(firstName, prop) {
+    var result = undefined; // setting a value to test against a if condition
+    for (var x = 0; x < contacts.length; x++) {
+        if (contacts[x].firstName !== firstName) { // this if body ony encapsuls the continue statment. continue means skip this loop and move to the next one. if it is on loop[0] go to loop[1]
+            continue;													  // if it reaches the last loop and it meets the if condition it will break and not carry out the code below it. it will then go outise the for loop body for instructions
+        }// outside the first if inside the first loop. is only reached if a loop does not reach continues condition
+
+        for (var i = 0; i < contacts[x].length; i++) {
+            if (contacts[x][i] === prop) {
+                result = contacts[x][i];
+                break;
+            }// outside the second if, but inside the loop
+            result = "No such property";
+        }// outside the second loop
+    }//outside the first loop
+    if (result === undefined) {
+        result = "No such contact"
+    }
+
+    return result;
+}
+
+
+
+function lookUpProfile( firstName, prop ){
+	for (x=0; x<contacts.length; x++){
+	    if (contacts[x].firstName == firstName){
+	        for (i=0; i<contacts[x].length; i++){
+	            if (contacts[x][i] == prop){
+	                return contacts[x][i];
+	            }
+	        }return "No such property";
+	    }
+	}return "No such contact";
+	}
+</script>

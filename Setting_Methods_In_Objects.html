@@ -1,0 +1,29 @@
+<!--  How to add methods to an object. ANY time you deal with a attribute of a object you need to use this.x
+ -->
+<head>
+    <meta charset="UTF-8">
+    <title>Test Document</title>       
+    <script>
+function people(name,age){
+	this.name = name;
+	this.age = age;
+	this.yearsUntilRetire = yearsLeft; // When setting an attribute to a method you use the method name with ; instead of ()
+}																// but when you call the attribute you use () shown below in the body script
+
+function yearsLeft(){
+// ANY time you deal with an attribute of an object you need to use this.attribute to use it in any way. since the people object calls this function 
+// this function has access to the current objects attributes you are calling this function with. so it will know what this.age is and to apply it to the current object
+	var numYears = 65 - this.age;
+	return numYears;  //return takes the information you set it to and gives it at the end of the function proccess.
+}
+
+var natalie = new people("Natalie Portman",28);
+var tommy = new people("Thomas Burner",33);
+</script>
+</head>
+<body>
+<script>
+document.write(natalie.yearsUntilRetire()); // To get the value of an attribute that has its value based on a method you need to use the attribute name with()
+document.write(tommy.yearsUntilRetire());
+</script>
+</body>

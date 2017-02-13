@@ -1,0 +1,26 @@
+<!-- Associative Array seem to work somewhat like python dictionaries you can add entries to the variable
+bucky with the normal number ordering system and or you can create a word system to index entries
+but printing out bucky will only print the number ordered entries. you need to manually call
+word entries to view or use them.
+ --> 
+<head>
+    <meta charset="UTF-8">
+    <title>Test Document</title>       
+ <script>
+
+</script>
+</head>
+<body>
+<script>
+
+var bucky = ["test"];
+// 1 is the number order so it will be in the 1 posistion with 0 before it and 2 after it
+bucky[1]="one"
+bucky["color"] = "blue";
+bucky["food"] = "hot pockets";
+
+document.write("Buckies favorite food is "+bucky);
+document.write("Buckies favorite food is "+bucky["food"]);
+
+</script>
+</body>

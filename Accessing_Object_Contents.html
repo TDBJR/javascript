@@ -1,0 +1,51 @@
+<script>
+var contacts = [
+// the contents can be accessed with wither the [0].name or [0][0]
+    { //contacts[0]
+        "firstName": "Akira", //contacts[0].firstName
+        "lastName": "Laine",//contacts[0].lastName
+        "number": "0543236543",//contacts[0].number
+        "likes": ["Pizza", "Coding", "Brownie Points"]//contacts[0].likes
+    },
+    {//contacts[1]
+        "firstName": "Harry",//contacts[1][0]
+        "lastName": "Potter",//contacts[1][1]
+        "number": "0994372684",///contacts[1][2]
+        "likes": ["Hogwarts", "Magic", "Hagrid"]//contacts[1][3]
+    },
+    { //contacts[2]
+        "firstName": "Sherlock",//contacts[2].firstName
+        "lastName": "Holmes",//contacts[2].lastName
+        "number": "0487345643",//contacts[2].number
+        "likes": ["Intriguing Cases", "Violin"]//contacts[2].likes
+    },
+    {// contacts[3]
+        "firstName": "Kristian",//contacts[3][0]
+        "lastName": "Vos", //contacts[3][1]
+        "number": "unknown",//contacts[3][2]
+        "likes": ["Javascript", "Gaming", "Foxes"]//contacts[3][3]
+    }
+];
+/* Note that the contacts entries have no direct variable to call to access each one, so you have to use the number ordering system [0] to access them
+contacts[0] is the first group entry you can access the contents of it with contacts[0][0] or by name contacts[0].firstName will be "Akira" */
+function lookUpProfile( firstName, prop ){
+  for (x=0; x<contacts.length; x++){
+    if (contacts[x].firstName == firstName){
+      if (contacts[x].hasOwnProperty(prop)){
+        return contacts[x][prop];
+      }else{  //Elses and returns need to be outside of the loop after every loop has finished
+        return "No such property";
+      }
+    }//end of if but still inside loop
+  }return "No such contact"; /* this covers if the loop never run because contacts is empty, it also covers 
+  the first if statement so although you can add a else statment for the first if it is not needed*/
+
+
+// Only change code above this line
+}
+
+// Change these values to test your function
+lookUpProfile("Kristian", "lastName");
+
+
+</script>

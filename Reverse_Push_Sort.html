@@ -1,0 +1,28 @@
+<!-- Reverse() will reverse the order of a array/list
+	  Push() adds a entry to the start of your array
+	  Sort() sorts the items alphabetically but will place capiltol letters in a list before lower case so
+	  upper Z will go before any lower cast letter Z a b c
+ --> 
+<head>
+    <meta charset="UTF-8">
+    <title>Test Document</title>       
+ <script>
+
+</script>
+</head>
+<body>
+<script>
+
+var bp = ["head", "shoulders", "knees","toes"];
+
+bp.reverse();
+bp.push("tounge","liver");
+bp.sort();
+
+// optionaly can turn it into a string but not needed to display it
+var string1 = bp.join();
+
+document.write(string1)
+document.write(bp)
+</script>
+</body>

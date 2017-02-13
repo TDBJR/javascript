@@ -1,0 +1,28 @@
+<!-- Javascript automatically creates all forms as a forms[] array/list. 
+The first form is forms[0] the second forms[1] the third forms[2] 
+Forms is a child of document so when you call it you need to write document.forms[]
+An Array is also created for the elements in a Forms[] object as document.forms[].elements[]
+but you can also access a form and it's elements by its name 
+document.tommysFantasticForm.username --> 
+ <!doctype html>
+<head>
+    <meta charset="UTF-8">
+    <title>Test Document</title>       
+ <script>
+
+</script>
+</head>
+<body>
+<form name="tommysFantasticForm">
+		Username: <input type="text" name="username"/>
+		Password: <input type="password" name="password"/>
+		<input type="submit" value="Submit" name="locknessMonster"/>
+</form>
+<script>
+//Both of these work
+var x = document.tommysFantasticForm.username.name// we defined the name above
+//var x = document.forms[0].elements[2].name
+document.write(x);
+
+</script>
+</body>

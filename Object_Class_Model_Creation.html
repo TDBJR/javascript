@@ -1,0 +1,26 @@
+<!--  When making a object/class/model you do it in the head and when printing something you do it 
+in the body when making a function you use this.x = name to assign a var to a value. If you try to use 
+var x = name you will get undefined in return instead of the actual value.
+ -->
+<head>
+    <meta charset="UTF-8">
+    <title>Test Document</title>    
+   
+    <script>
+//Constructor function
+	function person(name, age){
+// this.x is how you create an attribute in a object/class/model this.x works like a constructor or __init__.
+// It allows an object to be used in multiple templates
+		this.	name = name;
+		this.age = age;
+	}
+// new is how you create a new instance of a object/class/model followed by the object(stats,stats)
+var tom = new person("Tom", 33);
+var	taylor = new person("Taylor Swift", 25);
+</script>
+</head>
+<body>
+<script>
+document.write(tom.name ," ", tom.age, "<br>" ,taylor.name," ",taylor.age);
+</script>
+</body>

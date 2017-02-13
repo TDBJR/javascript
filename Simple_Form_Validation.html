@@ -1,0 +1,27 @@
+<!--  form validation done with a function. When checked a Check box has a value of checked
+that allows you to make a conditional statement--> 
+ <!doctype html>
+<head>
+    <meta charset="UTF-8">
+    <title>Test Document</title>       
+ <script>
+// This  function doesn't need multiple bodies { } for a else statement aparently, but will work with them
+		function validator(){
+			if(document.tommysFantasticForm.thebox.checked)
+				alert("Yep its checked!");
+			else
+				alert("No its not checked!");
+		}
+</script>
+</head>
+<body>
+<form name="tommysFantasticForm">
+		<input type="checkbox" name="thebox"/>
+		<input type="button" value="Press Me!" onClick="validator()"/>
+</form>
+<script>
+ 
+ 
+
+</script>
+</body>

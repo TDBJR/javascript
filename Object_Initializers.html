@@ -1,0 +1,18 @@
+<!--  Object initializers are faster than constructor functions and are used when creating only a 
+  few (2-3) objects, since this is not a template it is only a way to hard-code objects to be used 
+  and not used to create dynamic objects on the fly
+ -->
+<head>
+    <meta charset="UTF-8">
+    <title>Test Document</title>       
+    <script>
+		tom = {name:"Thomas Burner",age:33};
+		taylor = {name:"Tayor Swift",age:25};
+
+</script>
+</head>
+<body>
+<script>
+document.write(tom.name + " Loves "+taylor.name+ " because she is "+taylor.age);
+</script>
+</body>

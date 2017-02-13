@@ -1,0 +1,24 @@
+<!-- Javascript automatically creates all forms as a forms[] array/list. 
+The first form is forms[0] the second forms[1] the third forms[2]
+Forms is a child of document wo when you call it you need to write
+document.forms[]
+ --> 
+ <!doctype html>
+<head>
+    <meta charset="UTF-8">
+    <title>Test Document</title>       
+ <script>
+
+</script>
+</head>
+<body>
+<form >
+		Username: <input type="text" />
+		Password: <input type="password" />
+		<input type="submit" value="Submit!" />
+</form>
+<script>
+var x = document.forms[0].length; //the length of a form is the amount of elements in it.
+document.write(x);// this will be 3 since the form has 3 elements.
+</script>
+</body>

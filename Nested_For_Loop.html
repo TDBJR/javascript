@@ -1,0 +1,28 @@
+<!--  loop to take a nested list and multiple each integer in the list times the var product's new value
+		product = product * each list item
+ --> 
+<head>
+    <meta charset="UTF-8">
+    <title>Test Document</title>       
+ <script>
+
+    
+</script>
+</head>
+<body>
+<script>
+
+function multiplyAll(arr) {
+  var product = 1;
+  
+  for (i=0; i<arr.length; i++){ // loop = length of list
+    for (x=0; x<arr[i].length; x++){ // loop = to length of items in list[0]
+      product *= arr[i][x];   // product = product * arr[total][total] cycles through every item
+      }}
+  //return product;
+  return document.write(product);  
+}
+multiplyAll([[1,2],[3,4],[5,6,7]]);
+
+</script>
+</body>
